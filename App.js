@@ -27,12 +27,15 @@ export default function App() {
 
   return (
     <View style={styles.root}>
-      <StatusBar barStyle="light-content" backgroundColor={COLORS.primary} />
+      <StatusBar barStyle="light-content" backgroundColor={COLORS.background} />
 
       {/* Header tetap di atas (tidak ikut scroll) */}
-      <View style={[styles.header, { paddingTop: TOP_INSET + 16 }]}>
-        <Text style={styles.headerSubtitle}>Selamat datang 👋</Text>
+      <View style={[styles.header, { paddingTop: TOP_INSET + 20 }]}>
+        <View style={styles.badgeSemester}>
+          <Text style={styles.badgeSemesterText}>SEMESTER 3</Text>
+        </View>
         <Text style={styles.headerTitle}>Dashboard Mahasiswa</Text>
+        <Text style={styles.headerSubtitle}>Lab Pemrograman Mobile</Text>
       </View>
 
       {/* Satu-satunya area scroll: FlatList di dalam StudentDirectoryScreen */}
@@ -49,27 +52,41 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.background,
   },
   header: {
-    backgroundColor: COLORS.primary,
+    backgroundColor: COLORS.surface,
     paddingHorizontal: 20,
-    paddingBottom: 28,
-    borderBottomLeftRadius: 28,
-    borderBottomRightRadius: 28,
+    paddingBottom: 20,
+    borderBottomWidth: 2,
+    borderBottomColor: COLORS.primary,
   },
-  headerSubtitle: {
-    color: '#C7D2FE',
-    fontSize: 14,
-    fontWeight: '600',
-    marginBottom: 4,
+  badgeSemester: {
+    alignSelf: 'flex-start',
+    backgroundColor: COLORS.primary,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: 6,
+    marginBottom: 10,
+  },
+  badgeSemesterText: {
+    color: '#FFFFFF',
+    fontSize: 11,
+    fontWeight: '800',
+    letterSpacing: 1,
   },
   headerTitle: {
-    color: '#FFFFFF',
-    fontSize: 26,
+    color: COLORS.textDark,
+    fontSize: 28,
     fontWeight: '800',
+  },
+  headerSubtitle: {
+    color: COLORS.accent,
+    fontSize: 14,
+    fontWeight: '600',
+    marginTop: 4,
   },
   body: {
     flex: 1,
     paddingHorizontal: 20,
-    paddingTop: 12,
+    paddingTop: 16,
   },
   sectionTitle: {
     fontSize: 18,

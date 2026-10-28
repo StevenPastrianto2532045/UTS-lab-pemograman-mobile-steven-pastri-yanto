@@ -5,7 +5,7 @@ import { COLORS, PRODI_COLORS, DEFAULT_PRODI_COLOR } from '../constants/theme';
 
 // Dataset statis (di luar komponen utama)
 const DAFTAR_MAHASISWA = [
-  { id: '1', nama: 'MIKAIL ASA', prodi: 'Teknologi Informasi' },
+  { id: '1', nama: 'Steven Pastri Yanto', prodi: 'Teknologi Informasi' },
   { id: '2', nama: 'Budi Santoso', prodi: 'Teknologi Informasi' },
   { id: '3', nama: 'Citra Dewi', prodi: 'Sistem Informasi' },
   { id: '4', nama: 'Dimas Anggara', prodi: 'Teknik Informatika' },
